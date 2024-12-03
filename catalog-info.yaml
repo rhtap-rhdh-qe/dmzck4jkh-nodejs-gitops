@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: dmzck4jkh-nodejs-gitops
+  description: This is GitOps manifest for dmzck4jkh-nodejs   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: dmzck4jkh-nodejs
+    backstage.io/kubernetes-id: dmzck4jkh-nodejs 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: dmzck4jkh-nodejs   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:dmzck4jkh-nodejs
